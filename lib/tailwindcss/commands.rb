@@ -58,7 +58,7 @@ module Tailwindcss
       def compile_command(debug: false, **kwargs)
         [
           executable(**kwargs),
-          "-i", Rails.root.join("app/assets/stylesheets/application.tailwind.css").to_s,
+          "-i", Rails.root.join("app/assets/stylesheets/application.tailwind.scss").to_s,
           "-o", Rails.root.join("app/assets/builds/tailwind.css").to_s,
           "-c", Rails.root.join("config/tailwind.config.js").to_s,
         ].tap do |command|
